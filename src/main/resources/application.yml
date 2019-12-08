@@ -1,0 +1,18 @@
+spring:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+    serialization:
+      indent-output: true
+
+  thymeleaf:
+    cache: false
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html
+
+nhs:
+  login:
+    clientId: your_client_id_here
+server:
+  port: 8081

@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" th:href="@{/css/main.css}">
+<link rel="stylesheet" th:href="@{/css/myhealth.css}">
+<link rel="stylesheet" th:href="@{/css/accessible-autocomplete.min.css}">
+<link rel="stylesheet" th:href="@{/css/myhealth-v2.css}">
+
+<div class="nhsuk-width-container {{ containerClasses }}">
+    <main class="nhsuk-main-wrapper {{ mainClasses }}" id="maincontent" role="main">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+
+                <div class="nhsuk-grid-row nhsuk-panel-group">
+                    <div class="nhsuk-grid-column-one-third nhsuk-panel-group__item">
+                        <div class="nhsuk-panel">
+                            <h3>Sign in</h3>
+                            <p>Use NHS Login to access your health records</p>
+                            <!-- The OIDC journey starts with the "/authorize" endpoint, which receives the OIDC parameters, a set of requested scopes and a client_id -->
+                            <a
+                                    href="https://auth.sandpit.signin.nhs.uk/authorize?scope=openid%20profile%20nhs_app_credentials%20gp_integration_credentials&client_id=java_test_client&redirect_uri=http://localhost:8081/callback&response_type=code&state=appstate&nonce=randomnonce">
+                                <img width="250" src="img/SignInWith_Original@2x.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nhsuk-grid-column-one-third nhsuk-panel-group__item">
+                        <div class="nhsuk-panel">
+                            <h3>Healthy weight</h3>
+                            <p>Check your BMI using our healthy weight calculator and find out if you're a healthy
+                                weight</p>
+                        </div>
+                    </div>
+                    <div class="nhsuk-grid-column-one-third nhsuk-panel-group__item">
+                        <div class="nhsuk-panel">
+                            <h3>Hate cats</h3>
+                            <p>Find out how and why cats can kill you </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+</html>
