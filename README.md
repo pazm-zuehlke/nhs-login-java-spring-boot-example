@@ -19,7 +19,7 @@ Navigate browser to localhost:8081
 
 ### Integrating with the sandpit
 
-Once you have generated your public/private key pair and recieved your client ID for the NHS login sandpit:
+Once you have generated your public/private key pair and received your client ID for the NHS login sandpit:
 
-* Add your client ID to the `application.yml` file (under nhs.login.clientId)
+* Add your client ID in the `application.yml` file (under nhs.login.clientId)
 * copy your own private key into `src/main/resources/keys/private_key.pem`

@@ -1,4 +1,4 @@
-package com.example.demo.dto;
+package com.example.demo.NHSLogin;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -23,6 +23,7 @@ public class TokenService {
 
     public static String getJws(String clientId, String tokenUri) {
         try {
+            // Private keys should be accessed securely, and not stored in the repository in production!
             String privateKeyContent = new String(Files.readAllBytes(Paths.get(ClassLoader.getSystemResource("keys/private_key.pem").toURI())));
 
             privateKeyContent = privateKeyContent
